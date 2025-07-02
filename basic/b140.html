@@ -6,7 +6,13 @@
         <title>Document</title>
     </head>
     <body>
-        <h1 style="text-align: center;color: red;">Q. Assigning JavaScript
-            Values</h1>
+        <h1 style="text-align: center;color: red;">Q. evaluates expressions from
+            left to right</h1>
+        <p id="demo"></p>
+        <script>
+            var a=20+5+"jina";
+            var b="jina" + 20 + 5;
+            document.getElementById("demo").innerHTML=a + "<br>" + b;
+        </script>
     </body>
 </html>

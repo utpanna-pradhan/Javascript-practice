@@ -6,11 +6,13 @@
         <title>Document</title>
     </head>
     <body>
-        <h1 style="text-align: center;color: red;">Q. quotes inside a string</h1>
+        <h1 style="text-align: center;color: red;">Q. A simple function</h1>
+        <button onclick="clickme()">click</button>
         <p id="demo"></p>
         <script>
-            var a ="hello it's me jina!! how's your day??";
-            document.getElementById("demo").innerHTML=a;
-        </script>
+        function clickme(){
+            document.getElementById("demo").innerHTML="Hello world";
+        }
+     </script>
     </body>
 </html>

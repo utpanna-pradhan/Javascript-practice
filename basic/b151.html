@@ -6,11 +6,13 @@
         <title>Document</title>
     </head>
     <body>
-        <h1 style="text-align: center;color: red;">Q. quotes inside a string</h1>
+        <h1 style="text-align: center;color: red;">Q. onclick Attribute</h1>
         <p id="demo"></p>
+        <button onclick="myfunc()">Click me</button>
         <script>
-            var a ="hello it's me jina!! how's your day??";
-            document.getElementById("demo").innerHTML=a;
-        </script>
+        function myfunc(){
+            document.getElementById("demo").innerHTML=Date();
+        }
+     </script>
     </body>
 </html>

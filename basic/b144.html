@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;color: red;">Q. access an object method
+            without (), it will return the function definition</h1>
+        <p id="demo"></p>
+        <script>
+        let person={
+            fname:"jina",
+            lname:"pradhan",
+            fullname:function(){
+                return this.fname + " " + this.lname;
+            }
+            
+        };
+        document.getElementById("demo").innerHTML=person.fullname;
+     </script>
+    </body>
+</html>
