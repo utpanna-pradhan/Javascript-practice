@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-     <h1 style="text-align: center;color: red;">Q. evaluates expressions from
-            left to right</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;color: red;">Q. JavaScript Strings</h1>
+        <h2>You can use single or double quotes</h2>
+        <p id="demo"></p>
+        <h2>You can use quotes inside a string, as long as they don't match the
+            quotes surrounding the string:</h2>
+        <p id="demo2">
+            <h2>Blackslash before quote</h2>
+            <p id="demo3"></p>
+            <h2>length of the string</h2>
+            <p id="demo4"></p>
+            <h2>Break string line with \</h2>
+            <p id="demo5"></p>
+
+        </p>
+        <script>
+        var a="jina";
+        var b='Pradhan';
+        var c="it's alright";
+        var d='this is a "flower"';
+        var e=" Hello i am \"jina\" ";
+        var f='it\'s rainy';
+        var lenstr="asagsfdsejdgeuiwhnksc";
+        document.getElementById("demo").innerHTML=a + " " + b;
+        document.getElementById("demo2").innerHTML=c + "<br>" + d;
+        document.getElementById("demo3").innerHTML=e + "<br>" + f;
+        document.getElementById("demo4").innerHTML="Length of the string is :" + f.length;
+        document.getElementById("demo5").innerHTML="jina \
+        pradhan";
+      
+     </script>
+    </body>
 </html>

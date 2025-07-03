@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-     <h1 style="text-align: center;color: red;">Q. evaluates expressions from
-            left to right</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;color: red;">Q. JS string methods</h1>
+        <h2>indexOf() method returns the position of the first occurrence of a
+            string</h2>
+        <p id="demo"></p>
+        <h2>match() global (/g) search for the letters "ain" (/ain) in a
+            string</h2>
+        <p id="demo2"> </p>
+
+        <h2>replace() </h2>
+        <p id="demo3"> </p>
+        <h2>toUpperCase() </h2>
+        <p id="demo4"> </p>
+        <h2>toLowerCase() </h2>
+        <p id="demo5"> </p>
+        <h2>split() </h2>
+        <p id="demo6"> </p>
+
+        <script>
+        let txt="hello this is located at this location locate";
+        let txt2= "The rain in SPAIN stays mainly in the plain"; 
+        let txt3="please visit microsoft";
+        let txt4="a,b,c,d,e,f";
+        let txt4split=txt4.split(',');
+        document.getElementById("demo").innerHTML=txt.indexOf("locate");
+        document.getElementById("demo2").innerHTML=txt2.match(/ain/g);
+        document.getElementById("demo3").innerHTML=txt3.replace("microsoft","github");
+        document.getElementById("demo4").innerHTML=txt3.toUpperCase();
+        document.getElementById("demo5").innerHTML=txt3.toLowerCase();
+        document.getElementById("demo6").innerHTML=txt4split[0];
+
+     </script>
+    </body>
 </html>

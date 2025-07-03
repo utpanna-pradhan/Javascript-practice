@@ -6,7 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-     <h1 style="text-align: center;color: red;">Q. evaluates expressions from
-            left to right</h1>
+     <h1 style="text-align: center;color: red;">Q. JS numbers</h1>
+     <h2>Numbers can be written with or without decimals</h2>
+     <p id="demo"></p>
+     <h2>Extra large or extra small numbers can be written with scientific (exponent) notation,
+        Integers (numbers without a period or exponent notation) are accurate up to 15 digits
+     </h2>
+     <p id="demo2"></p>
+     <h2>Floating point arithmetic is not always 100% accurate.</h2>
+     <p id="demo3"></p>
+
+     <script>
+        let a=3.141;
+        let b=3;
+        let c=123e5;
+        let d=123e-5;
+        let x = 999999999999999;
+        let y = 9999999999999999;
+        document.getElementById("demo").innerHTML=a + "<br>" + b;
+        document.getElementById("demo2").innerHTML=c + "<br>" + d + "<br>" + x + "<br>" + y;
+        document.getElementById("demo3").innerHTML= "0.2 + 0.1 = " + (0.2 + 0.1);
+     </script>
 </body>
 </html>
