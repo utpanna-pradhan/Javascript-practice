@@ -6,7 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-     <h1 style="text-align: center;color: red;">Q. evaluates expressions from
-            left to right</h1>
+     <h1 style="text-align: center;color: red;">Q. display the cookies associated with this document</h1>
+     <button onclick="getdocCookie()">Click me</button>
+     <p id="demo"></p>
+     <script>
+        function getdocCookie(){
+            document.getElementById("demo").innerHTML=document.cookie;
+        }
+     </script>
 </body>
 </html>

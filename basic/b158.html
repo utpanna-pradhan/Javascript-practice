@@ -6,7 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-     <h1 style="text-align: center;color: red;">Q. evaluates expressions from
-            left to right</h1>
+     <h1 style="text-align: center;color: red;">Q. Click the button to replace this document with new content.</h1>
+     <button onclick="replaceDoc()">try it</button>
+     <p id="demo"></p>
+     <script>
+        function replaceDoc(){
+            document.open('text/html',"replace");
+            document.write("<h2>Hello world</h2>");
+            document.close();
+        }
+     </script>
 </body>
 </html>

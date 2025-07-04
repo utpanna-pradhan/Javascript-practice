@@ -6,7 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-     <h1 style="text-align: center;color: red;">Q. evaluates expressions from
-            left to right</h1>
+     <h1 style="text-align: center;color: red;">Q. Display number of element with specific name and tag name</h1>
+     <label for="">Name</label>
+     <input type="text" name="name">
+     <br> <br>
+      <label for="">Name</label>
+     <input type="text" name="name" id="">
+     <br> <br>
+      <label for="">Name</label>
+     <input type="text" name="name">
+     <br> <br>
+     <input type="submit" value="submit">
+     <br> <br>
+     <button onclick="sameName()">element with same name</button>
+     <p id="demo"></p>
+     <button onclick="sameTag()">element with tag name</button>
+     <script>
+        function sameName(){
+            const x= document.getElementsByName("name");
+            document.getElementById("demo").innerHTML=x.length
+        }
+           function sameTag(){
+            const y= document.getElementsByTagName("input");
+            document.getElementById("demo").innerHTML=y.length
+        }
+     </script>
 </body>
 </html>

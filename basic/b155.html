@@ -15,6 +15,16 @@
      <p id="demo2"></p>
      <h2>Floating point arithmetic is not always 100% accurate.</h2>
      <p id="demo3"></p>
+     <h2>Add 2 number is a number</h2>
+     <p id="demo4"></p>
+     <h2>add two numeric strings, the result will be a concatenated string</h2>
+     <p id="demo5"></p>
+      <h2>add a number and a numeric string, the result will be a concatenated string</h2>
+     <p id="demo6"></p>
+     <h2>convert strings to numbers when dividing,multiplying,substracting</h2>
+     <p id="demo7"></p>
+     <h2> number divided by a non-numeric string becomes NaN</h2>
+     <p id="demo8"></p>
 
      <script>
         let a=3.141;
@@ -23,9 +33,19 @@
         let d=123e-5;
         let x = 999999999999999;
         let y = 9999999999999999;
+        let e=7;
+        let f=8;
+        let str1="10";
+        let str2="20";
+        let str3=20;
         document.getElementById("demo").innerHTML=a + "<br>" + b;
         document.getElementById("demo2").innerHTML=c + "<br>" + d + "<br>" + x + "<br>" + y;
         document.getElementById("demo3").innerHTML= "0.2 + 0.1 = " + (0.2 + 0.1);
+        document.getElementById("demo4").innerHTML=e + f;
+        document.getElementById("demo5").innerHTML="'10'+'20' is : " + (str1+str2);
+         document.getElementById("demo6").innerHTML="20 +'10' is : " + (str3+str1);
+         document.getElementById("demo7").innerHTML="'20'/'10' is :" + (str2/str1);
+         document.getElementById("demo8").innerHTML="'20'/'apple' is " + (str2/"apple");
      </script>
 </body>
 </html>

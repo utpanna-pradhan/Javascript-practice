@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1 style="text-align: center;color: red;">Q. Anchors Collection</h1>
+    <h2>Finding HTML Elements Using document.anchors</h2>
+    <a name="html" href="">HTML</a>
+    <a  name="css" href="">CSS</a>
+    <a  name="js" href="">JavaScript</a>
+    <p id="demo"></p>
+    <button onclick="numberofAnchor()">number of anchor tag</button>
+     <button onclick="textOfanchor()">InnerHTML of anchor[0]</button>
+    <script>
+        function numberofAnchor(){
+            document.getElementById("demo").innerHTML=document.anchors.length;
+        }
+        function textOfanchor(){
+            document.getElementById("demo").innerHTML=document.anchors[0].innerHTML;
+        }
+    </script>
+</body>
+</html>

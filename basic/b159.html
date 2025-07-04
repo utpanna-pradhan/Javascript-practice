@@ -6,7 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-     <h1 style="text-align: center;color: red;">Q. evaluates expressions from
-            left to right</h1>
+     <h1 style="text-align: center;color: red;">Q.Click the button to open a new window and add some content.</h1>
+     <button onclick="openDoc()">Click me</button>
+     <script>
+        function openDoc(){
+            var w=window.open();
+            w.document.open();
+            w.document.write("<h2>Hello world");
+            w.document.close();
+        }
+     </script>
 </body>
 </html>
