@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1 style="text-align: center;color: red;">Q. Images Collection</h1>
+      <img src="../images/offbulb.jpg" alt="" width="100" height="200" id="img1">
+       <img src="../images/offbulb.jpg" alt=""  width="100" height="200" id="img2">
+       <p id="demo"></p>
+       <p id="demo2"></p>
+       <script>
+        document.getElementById("demo").innerHTML="number of images :" + document.images.length;
+        document.getElementById("demo2").innerHTML="id of image1 :" + document.images[0].id;
+       </script>
+</body>
+</html>

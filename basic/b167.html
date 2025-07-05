@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;color: red;">Form Object</h1>
+        <h2>Form submit</h2>
+        <form action="./submit.html" id="form1" method="get">
+            <label for="name">Name :</label>
+            <input type="text"  value="Jina"><br><br>
+            <label for="address">Address :</label>
+            <input type="text" value="Odihsha"><br><br>
+            <label for="age">Age :</label>
+            <input type="number" value="25"><br><br>
+            <button type="submit" onclick="submitForm()">Submit</button>
+            <button type="reset" onclick="ResetBtn()">Reset</button>
+        </form>
+        <h2>Find the value of each element in form</h2>
+        <p id="demo"></p>
+        <script>
+        function submitForm(){
+            document.getElementById("form1").submit();
+        }
+        function ResetBtn(){
+            document.getElementById("form1").reset();
+        }
+        var x= document.getElementById("form1");
+        for (let i=0;i<x.length;i++){
+            
+        }
+    </script>
+    </body>
+</html>

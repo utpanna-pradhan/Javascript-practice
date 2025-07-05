@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;color: red;">Button Object</h1>
+        <h2>Disables ok button</h2>
+
+        <form action id="form1">
+            <input type="button" value="ok" id="okbtn" name="subject">
+        </form>
+        <br><br>
+        <button onclick="disableButton()">Disable ok button </button>
+        <h2>Name of the "OK" button</h2>
+        <p id="demo"></p>
+        <h2>Type of the "OK" button</h2>
+        <p id="demo2"></p>
+
+        <h2>value of the "HTML" button</h2>
+        <button value="fav_subject" id="html">HTML</button>
+        <p id="demo3"></p>
+        <h2>Text Of "HTML" button</h2>
+        <p id="demo4"></p>
+
+        <h2>Id of form </h2>
+        <p id="demo5"></p>
+
+        <script>
+        function disableButton(){
+            document.getElementById("okbtn").disabled="true";
+        }
+       
+        document.getElementById("demo").innerHTML="Name of Ok button :" + document.getElementById("okbtn").name;
+        document.getElementById("demo2").innerHTML="Type of Ok button :"+ document.querySelector("input").type;
+        document.getElementById("demo3").innerHTML="Value of HTML button : "+ document.getElementById("html").value;
+         document.getElementById("demo4").innerHTML="Text of HTML button : "+ document.getElementById("html").innerHTML;
+         document.getElementById("demo5").innerHTML="Form id is :" + document.getElementById("okbtn").form.id;
+    </script>
+    </body>
+</html>

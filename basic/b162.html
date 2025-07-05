@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;color: red;">Q. Links Collection</h1>
+        <h2>Finding HTML Elements Using document.links</h2>
+        <a href="#html">HTML</a>
+        <a href="#html">HTML</a>
+        <a href="#html">HTML</a>
+        <a href="#html">HTML</a>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <script>
+            document.getElementById("demo").innerHTML="number of links :" + document.links.length;
+             document.getElementById("demo2").innerHTML="href of 1st link  :" + document.links[0].href;
+         </script>
+    </body>
+</html>

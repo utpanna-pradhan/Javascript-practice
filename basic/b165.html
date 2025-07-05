@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1 style="text-align: center;color: red;">Q. CSS Manipulation</h1>
+      <p id="p_content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis deleniti maxime necessitatibus deserunt quisquam eligendi cumque magni blanditiis exercitationem iusto? Suscipit exercitationem qui aperiam recusandae? Possimus aliquam reiciendis fugit quis.</p>
+      <button onclick="clickme()">Hide p</button>
+       <button onclick="changeColor()">Change color p</button>
+      <script>
+        function clickme(){
+            document.getElementById("p_content").style.display="none";
+        }
+        function changeColor(){
+            document.getElementById("p_content").style.backgroundColor="yellow";
+        }
+      </script>
+</body>
+</html>
