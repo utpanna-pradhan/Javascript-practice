@@ -1,28 +1,41 @@
 # 1. What is JavaScript?
-JavaScript is a lightweight, interpreted scripting language used to make web pages interactive. It runs in the browser.
+- JavaScript is a lightweight, interpreted scripting language used to make web pages interactive.
+- It runs in the browser.
+- Used for both client and server side.
+- Dynamically update content, controls multimedia, animate images and many more.
 
 # 2. What are the data types supported by JavaScript?
-Primitive: String, Number, BigInt, Boolean, undefined, null, Symbol
-
-Non-primitive: Object, Array, Function
+- Primitive: String, Number, BigInt, Boolean, undefined, null, Symbol.
+- Non-primitive: Object, Array, Function.
 
 # 3. What is the difference between var, let, and const?
-var: function-scoped, can be redeclared
-
-let: block-scoped, cannot be redeclared
-
-const: block-scoped, cannot be reassigned
+- var: function-scoped, can be redeclared.
+- let: block-scoped, cannot be redeclared.
+- const: block-scoped, cannot be reassigned.
 
 # 4. What are primitive data types?
-They store a single value and are immutable. Examples: string, number, boolean.
+- Built-in data types provided by JavaScript.
+- They store a single value and are immutable(The variable may be reassigned to a new value, but the existing value can not be changed).
+- Examples: number,string, undefined,boolean,null,BigInt,symbol.
+- let x = 250; //number
+- let str = ‘Hello’; //string
+- let x; //undefined
+- let x = true; //boolean
+- let x = null; //null
+- let bigNum = 123422222222222222222222222222222222222n; //BigInt
+- let sym = Symbol(“Hello”) //symbol
 
 # 5. What is type coercion?
-Type coercion is automatic conversion of values from one data type to another (e.g., "5" + 1 becomes "51").
+- Type coercion is automatic conversion of values from one data type to another.
+- This happens because JavaScript is a weakly-typed language.
+- eg: console.log(“5” + 5);
+// Output: “55” (number 5 is coerced to string “5”)
 
 # 6. Difference between == and ===?
-== compares values after type conversion.
+- == (Loose Equality)compares values after type conversion.
+- === (Strict Equality)compares value and type both .
 
-=== compares value and type both (strict equality).
+
 
 # 7. What is a function?
 A reusable block of code that performs a specific task.
