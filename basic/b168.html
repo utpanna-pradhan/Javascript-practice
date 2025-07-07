@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;color: red;">Form Object</h1>
+    <form action="" id="form1" accept-charset="ISO-8859-1">
+        <input type="text" value="jina">
+        <br><br>
+        <input type="number" value="25">
+        <br><br>
+       
+        <button type="button" onclick="myfunc()">try</button>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+    </form>
+    <script>
+        function myfunc(){
+              var form = document.getElementById("form1");
+              var txt="";
+              var i;
+              for(i=0;i<form.length;i++){
+                txt+=form.elements[i].value + "<br>";
+              }
+              document.getElementById("demo").innerHTML=txt;
+        }
+      document.getElementById("demo2").innerHTML="Accepted charcter :" + document.getElementById("form1").acceptCharset;
+    </script>
+</body>
+</html>
