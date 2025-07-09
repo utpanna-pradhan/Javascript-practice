@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 style="text-align: center;color: red;">Form Object</h1>
-    <form action="" id="form1" accept-charset="ISO-8859-1">
-        <input type="text" value="jina">
-        <br><br>
-        <input type="number" value="25">
-        <br><br>
-       
-        <button type="button" onclick="myfunc()">try</button>
-        <p id="demo"></p>
-        <p id="demo2"></p>
+    <form action="./submit.html" method="get" id="form1"
+      accept-charset="ISO-8859-1" name="inputform" target="_blank">
+      <input type="text" value="jina">
+      <br><br>
+      <input type="number" value="25">
+      <br><br>
+
+      <button type="button" onclick="myfunc()">try</button>
+      <p id="demo"></p>
+      <p id="demo2"></p>
+      <p id="demo3"></p>
+      <p id="demo4"></p>
+      <p id="demo5"></p>
+      <p id="demo6"></p>
+      <p id="demo7"></p>
+      <p id="demo8"></p>
     </form>
     <script>
         function myfunc(){
+              var x;
               var form = document.getElementById("form1");
               var txt="";
               var i;
               for(i=0;i<form.length;i++){
                 txt+=form.elements[i].value + "<br>";
               }
-              document.getElementById("demo").innerHTML=txt;
+              document.getElementById("demo").innerHTML="Values present in each input are :" + "<br>" + txt;
         }
       document.getElementById("demo2").innerHTML="Accepted charcter :" + document.getElementById("form1").acceptCharset;
+      x= document.getElementById("form1").action
+      document.getElementById("demo3").innerHTML="action attribute value :" + x;
+      document.getElementById("demo4").innerHTML = "encypt value :" + document.getElementById("form1").enctype;
+      document.getElementById("demo5").innerHTML = "Number of element in form :" + document.getElementById("form1").length;
+      document.getElementById("demo6").innerHTML = "method of  form :" + document.getElementById("form1").method;
+       document.getElementById("demo7").innerHTML = "method of  form :" + document.getElementById("form1").name;
+        document.getElementById("demo8").innerHTML = "method of  form :" + document.getElementById("form1").target;
     </script>
-</body>
+  </body>
 </html>
