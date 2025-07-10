@@ -237,21 +237,48 @@ Using Number(), parseInt(), parseFloat()
 Using String() or .toString()
 
 # 29. What is truthy and falsy in JavaScript?
-Truthy: evaluates to true in boolean context (e.g., 1, "abc")
+#  Truthy: 
+- Any value that evaluates to true in a boolean context.
+- eg : (everything else which is not falsy)
+    "hello", 123, [], {}, true, "false", Infinity 
 
-Falsy: 0, "", null, undefined, false, NaN
+# Falsy: 
+- Any value that evaluates to false in a boolean context.
+- eg: false,  0 , "" or ''(Empty string), null, undefined, NaN
 
 # 30. What are logical operators?
-&& (AND)
+- JavaScript supports three logical operators:
+# && (AND)
+- 	Returns true if both conditions are true.
 
-|| (OR)
+# || (OR)
+- 	Returns true if any conditions is true.
 
-! (NOT)
+# ! (NOT)
+- Reverse the value
+
+- eg:
+    console.log(true && false); // false
+    console.log(true || false); // true
+    console.log(!true);         // false
 
 # 31. What is the difference between splice() and slice()?
-splice(): modifies original array
+splice(): 
+- modifies original array.
+- Adds/removes elements in an array.
+- eg:
+    let fruits = ["apple", "banana", "cherry"];
+    fruits.splice(1, 1); // removes 1 element at index 1
+    console.log(fruits); // ["apple", "cherry"]
 
-slice(): returns a shallow copy
+slice(): 
+- returns a shallow copy.
+- Returns a part of the array.
+- eg :
+    let fruits = ["apple", "banana", "cherry"];
+    let newFruits = fruits.slice(0, 2);
+    console.log(newFruits); // ["apple", "banana"]
+    console.log(fruits);    // Original remains unchanged
 
 # 32. What is the spread operator?
 Expands elements of an array or object:
