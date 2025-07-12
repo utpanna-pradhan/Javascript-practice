@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h3>You have input in HTML. Write JS to: 
+    <br>Read user input live
+
+ <br>Show total characters typed
+
+ <br>Clear input on button click</h3>
+ <input type="text" onkeyup="inputTyped()">
+
+ <button type="button" onclick="resetInput()">clear</button>
+  <p id="inputValue"></p>
+ <p id="inputchar"> </p>
+ <script>
+   
+    
+    function resetInput(){
+        document.querySelector("input").value=""
+    }
+    function inputTyped(){
+        document.getElementById("inputValue").textContent="User type :" + document.querySelector("input").value;
+        document.getElementById("inputchar").textContent="Total Number of characters :" + document.querySelector("input").value.length;
+    }
+   
+ </script>
+</body>
+</html>
