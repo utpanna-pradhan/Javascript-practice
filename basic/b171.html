@@ -1,91 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <style>
-            * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  background: hsl(137, 46%, 24%);
-  font-family: "Poppins", sans-serif;
-}
-.card {
-  max-width: 33rem;
-  background: #fff;
-  margin: 0 1rem;
-  padding: 1rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  border-radius: 0.5rem;
-}
-.star {
-  font-size: 10vh;
-  cursor: pointer;
-}
-.one {
-  color: rgb(255, 0, 0);
-}
-.two {
-  color: rgb(255, 106, 0);
-}
-.three {
-  color: rgb(251, 255, 120);
-}
-.four {
-  color: rgb(255, 255, 0);
-}
-.five {
-  color: rgb(24, 159, 14);
-}
-        </style>
-    </head>
-    <body>
-        <!-- Build 1–5 ⭐ rating system using plain JS + HTML -->
-        <h1>Rating system</h1>
-        <span onclick="gfg(1)" class="star">★</span>
-        <span onclick="gfg(2)" class="star">★</span>
-        <span onclick="gfg(3)" class="star">★</span>
-        <span onclick="gfg(4)" class="star">★</span>
-        <span onclick="gfg(5)" class="star">★</span>
-        <h3 id="output">Rating is: 0/5</h3>
-
-        <script>
-  let stars = 
-    document.getElementsByClassName("star");
-let output = 
-    document.getElementById("output");
-
-// Funtion to update rating
-function gfg(n) {
-    remove();
-    for (let i = 0; i < n; i++) {
-        if (n == 1) cls = "one";
-        else if (n == 2) cls = "two";
-        else if (n == 3) cls = "three";
-        else if (n == 4) cls = "four";
-        else if (n == 5) cls = "five";
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      max-width: 500px;
+      background-color: rgb(233, 231, 231);
+      padding: 20px;
+      border-radius: 18px;
+      margin: auto;
+      height: 100%;
+     
+    }
+    h3{
+      font-size: 38px;
+      margin: 20px 0px;
+      color: rgb(167, 5, 5);
+      text-decoration: underline;
+    }
+    h4{
+      margin: 20px 0px;
+      color: rgb(37, 37, 37);
+      font-size: 22px;
+    }
+    .one{
+      color: red;
+      
+    }
+    .two{
+      color: orange;
+    }
+    .three{
+      color: rgb(187, 175, 7);
+    }
+    .four{
+      color: lightgreen;
+    }
+    .five{
+      color: green;
+    }
+    span{
+      cursor: pointer;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>Star system</h3>
+    <span class="star" onclick="myfunc(1)">★</span>
+    <span class="star" onclick="myfunc(2)">★</span>
+    <span class="star" onclick="myfunc(3)">★</span>
+    <span class="star" onclick="myfunc(4)">★</span>
+    <span class="star" onclick="myfunc(5)">★</span>
+    <h4 id="output">You rated 0 stars</h4>
+    
+  </div>
+  <script>
+    const stars = document.getElementsByClassName("star");
+    const result = document.getElementById("output");
+    function myfunc(n){
+      remove();
+      for(let i=0 ; i < n ; i++){
+        if (n == 1)  cls = "one";
+        else if (n == 2)  cls = "two";
+        else if (n == 3)  cls = "three";
+        else if (n == 4)  cls = "four";
+        else if(n == 5)  cls = "five";
         stars[i].className = "star " + cls;
+      }
+    result.innerText = "Rating is " + n + "/5"
     }
-    output.innerText = "Rating is: " + n + "/5";
-}
-// To remove the pre-applied styling
-function remove() {
-    let i = 0;
-    while (i < 5) {
-        stars[i].className = "star";
+    function remove(){
+      let i=0;
+      while(i<5){
+        stars[i].className ="star";
         i++;
+      }
     }
-}
-</script>
-    </body>
+  </script>
+</body>
 </html>

@@ -14,10 +14,11 @@
      </form>
 
      <script>
-        function myfunc(){
+        function myfunc(e){
+            e.preventDefault();
             const inputValue = document.getElementById("myname").value;
             alert("Hello :" + inputValue);
-            document.getElementById("myinput").value=""
+            document.getElementById("myname").value=""
         }
      </script>
 </body>
