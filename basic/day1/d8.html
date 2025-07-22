@@ -1,0 +1,28 @@
+<!-- Make a basic page with:
+
+One <input type="text"> field
+
+One <p> below it that updates live to show reversed input -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action>
+            <label for="name">Enter Your Name</label>
+            <input type="text" name="name" id="name">
+            <button type="button" onclick="reversestr()">Reverse string</button>
+            <p id="demo"></p>
+        </form>
+        <script>
+            function reversestr(){
+                let inputValue = document.getElementById("name").value
+                document.getElementById("demo").innerHTML =inputValue.split('').reverse().join('')
+            }
+        </script>
+    </body>
+</html>
