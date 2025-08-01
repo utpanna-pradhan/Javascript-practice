@@ -281,17 +281,47 @@ slice():
     console.log(fruits);    // Original remains unchanged
 
 # 32. What is the spread operator?
-Expands elements of an array or object:
-
-
-const newArr = [...arr1, ...arr2];
+- The spread operator (...) is used to “spread out” the elements of an array / properties of an object / string / Sets /Maps.
+- eg:
+  const box1 = ["shirt", "jeans"];
+  const box2 = ["jacket", "cap"];
+  const wardrobe = [...box1, ...box2];
+  console.log(wardrobe); // ["shirt", "jeans", "jacket", "cap"]
+- eg :
+    const str = "Hello";
+    const chars = [...str];
+    console.log(chars); // ["H", "e", "l", "l", "o"]
 # 33. What is rest parameter?
-Used to represent an indefinite number of arguments:
+- The rest parameter in JavaScript allows a function to accept an indefinite number of arguments and collect them into a single array.
+- eg:
+  You're hosting a party but don’t know how many guests will come. The rest parameter lets you collect any number of guests.(When number of arguments is unknown we can use rest parameter)
+- It is denoted by three dots (...) followed by the parameter name, and it must be the last parameter 
+  syntax : 
+  function myFunction(arg1, arg2, ...restArgs) { ... }
+- eg:
+    function sum(...numbers) {
+    let total = 0;
+    for (let num of numbers) {
+      total += num;
+    }
+    return total;
+    }
 
+    console.log(sum(1, 2, 3)); // Output: 6
+    console.log(sum(5, 10, 15, 20)); // Output: 50
 
-function sum(...args) {}
 # 34. What is a callback function?
-A function passed as an argument to another function.
+- A callback function in JavaScript is simply a function that is passed as an argument to another function. The key idea is that this "passed-in" function is then executed inside the outer function, typically after some operation or task is completed. 
+- JavaScript executes code line by line (synchronously), but sometimes we need to delay execution or wait for a task to complete before running the next function. Callbacks help achieve this by passing a function that is executed later.
+- It is useful in JavaScript for handling asynchronous operations (like fetching data from a server or waiting for user input)
+- eg :
+    console.log("Start");
+
+    setTimeout(function () {
+        console.log("Inside setTimeout");
+    }, 2000);
+
+    console.log("End");
 
 # 35. What is setTimeout()?
 Executes a function after a delay.
