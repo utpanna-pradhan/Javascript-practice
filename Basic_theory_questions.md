@@ -291,6 +291,7 @@ slice():
     const str = "Hello";
     const chars = [...str];
     console.log(chars); // ["H", "e", "l", "l", "o"]
+
 # 33. What is rest parameter?
 - The rest parameter in JavaScript allows a function to accept an indefinite number of arguments and collect them into a single array.
 - eg:
@@ -324,22 +325,51 @@ slice():
     console.log("End");
 
 # 35. What is setTimeout()?
-Executes a function after a delay.
+-  Execute a function after a delay(measured in milliseconds)/
+- eg: A microwave timer - you set it for 2 minutes, and it beeps once when time’s up.
+- syntax :
+  setTimeout(function, delay);
+- eg:
+  setTimeout(() => {
+  console.log("Your cake is ready!");
+}, 2000); // Waits 2 seconds (2000ms), then runs
 
 # 36. What is setInterval()?
-Repeats execution of a function after fixed time intervals.
+-  Run a function repeatedly, with a fixed time gap .
+- eg: clock ticking every 1 second. It keeps ticking forever, until you stop it.
+- syntax :
+ setInterval(function, interval);
+- eg:
+  setInterval(() => {
+  console.log("Hello");
+}, 1000); // Runs every 1 second
 
 # 37. How to clear setTimeout or setInterval?
-Using clearTimeout(id) or clearInterval(id)
+- Sometimes you may want to cancel a timer or interval before it runs or continues.
+- eg:
+    You set a timer, but change your mind and cancel it before it beeps.
+    You set an alarm to ring every 5 minutes, but want to stop it after some time.
 
 # 38. What is Math object?
-Provides methods like Math.floor(), Math.random(), Math.max()
-
+- Allows you to perform mathematical tasks.
+- eg:
+  Math.floor(3.7);     // 3 (rounds down)
+  Math.ceil(3.2);      // 4 (rounds up)
+  Math.round(3.5);     // 4 (nearest)
+  Math.max(5, 9, 2);   // 9
+  Math.min(5, 9, 2);   // 2
+  Math.random();       // 0 to 1 (not including 1)
+  
 # 39. How to generate a random number?
-js
-Copy
-Edit
-Math.random(); // between 0 and 1
+- Use Math.random() to generate a floating-point number between 0 and 1 (excluding 1).
+- syntax = Math.random();
+- eg:
+    let randomNumber = Math.random();
+    console.log(randomNumber); //returns a random number between 0 (inclusive) and 1 (exclusive)
+- eg:
+    let randomNumber = Math.random() * 10; 
+    console.log(randomNumber); // Return a random number between 0 (inclusive) and 10 (exclusive):
+
 # 40. What is a ternary operator?
 - It is Known as Conditional Operator
 - A shorthand for simple if…else.

@@ -1,0 +1,2 @@
+console.log(false == '0'); //true as it compares only value not type and == first convert '0' to 0 by using typecoersion
+console.log(false === '0'); //false there's no type coersion concept used here.it strictly compare the datatype and value
