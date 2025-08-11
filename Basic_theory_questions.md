@@ -313,30 +313,62 @@ const add = (a, b) =>a+b;
     console.log(char);
   }
   // Output: H i
-# 21. What is an event in JavaScript?
 
-An action that can be handled with code, like click, mouseover.
+# 21. What is an event in JavaScript?
+- An event listener is a function that waits for a specific event to occur on a particular element then executes a defined block of code in response to that event.
+- eg:
+    Mouse clicks (click)
+    Mouse hover (mouseover)
+    Form submission (submit)
+    Keyboard input (keydown, keyup)
+    Page load (load)
 
 # 22. What is DOM?
-
-Document Object Model – structure of HTML elements as objects in JavaScript.
+- Document Object Model –  It represents the structure of a document as a logical tree, where each part of the document (like elements, attributes, and text) is represented as an object, or "node," in the tree.
+- JavaScript uses the DOM to :
+  - Select elements : getElementById(), getElementsByClassName(), getElementsByTagName(), querySelector(), and querySelectorAll().
+  - Change content : textContent or innerHTML
+  - Change styles :
+  - Add/Remove elements : createElement() , createElement() , appendChild(), removeChild()
+  - Handle events: addEventListener()
+- eg :
+    <h1 id="title">Hello</h1>
+    JavaScript can access this with:
+    document.getElementById("title").textContent = "Hi there!";
 
 # 23. How to select DOM elements?
-
-Using methods like:
-
-getElementById
-
-querySelector
-
-getElementsByClassName
+JavaScript provides several built-in methods to select elements from the DOM:
+- document.getElementById('id') – Selects a single element by it's ID
+- document.getElementsByClassName('class') – Returns a HTMLCollection of elements with the given class
+- document.getElementsByTagName('tag') – Returns elements by tag name
+- document.querySelector('selector') – Returns the first element that matches a CSS selector
+- document.querySelectorAll('selector') – Returns all matching elements as a static NodeList
 
 # 24. How to add an event listener?
-element.addEventListener('click', function() {});
+- This method attaches an event handler to a specified element, allowing a function to be executed when a particular event occurs on that element. 
+- syntax :
+  element.addEventListener(eventType, callbackFunction)
+  eventType:
+    The type of event to listen( 'click', 'mouseover', 'keydown', 'submit')
+ callbackFunction:
+    This is the function that will be executed when the specified event occurs. This can be a named function or an anonymous function. 
+- eg : 
+    const button = document.getElementById('myButton');
+    button.addEventListener('click', function() {
+      console.log('Button clicked!');
+    });
+// selects the HTML element with the ID "myButton".
+//'click' is the event type being listened for
+//the anonymous function function() { console.log('Button clicked!'); } is the code that will run when the button is clicked.
 
 # 25. What is the use of this keyword?
-
-Refers to the current object in context.
+- this keyword is a special reference that points to the object that is currently executing the function.
+-  Its value is not fixed and depends on how the function is invoked.
+- When this is used outside of any function or object, it refers to the global object.
+- In a method: this refers to the object the method is called on.
+- In a function (non-strict mode): this refers to the global object .
+- In a constructor: this refers to the new object being created.
+- In arrow functions: this is lexically bound (inherits from the outer scope).
 
 # 26. What is the default value of uninitialized variables?
 
