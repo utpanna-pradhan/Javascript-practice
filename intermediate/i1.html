@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>color switcher</title>
+        <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+            h1,h2{
+                text-align: center;
+            }
+            .canva{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .button{
+               
+                border: 1.5px solid;
+                padding: 50px;
+                margin:20px;
+                cursor: pointer;
+                border-radius: 25px;
+            }
+            #gray{
+                background-color: grey;
+            }
+             #white{
+                background-color: rgb(255, 255, 255);
+            }
+             #blue{
+                background-color: rgb(26, 74, 136);
+            }
+             #yellow{
+                background-color: rgb(189, 165, 34);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Background Color Switcher</h1>
+        <h2>click on the colors to change the backgorund color</h2>
+        <div class="canva">
+
+            <span class="button" id="gray"></span>
+            <span class="button" id="white"></span>
+            <span class="button" id="blue"></span>
+            <span class="button" id="yellow"></span>
+        </div>
+    </body>
+    <script>
+        const body = document.querySelector("body");
+        const buttons = document.querySelectorAll(".button");
+        buttons.forEach((button)=>{
+            // console.log(button);
+            button.addEventListener("click",function(e){
+                // console.log(e);
+                //console.log(e.target.id);
+                body.style.backgroundColor = e.target.id;
+                
+            })
+        })
+    </script>
+</html>
