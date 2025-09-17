@@ -31,12 +31,22 @@
         }
         return color;
     }
-    // const startChangingColor()= function(){
-    //     document.body.style.backgroundColor=
-    // }
+     let intervalId;
+    const startChangingColor= function(){
+        if(!intervalId){
+             intervalId=setInterval(changeBackgroundcolor,1000)
+        }
+       
+        function changeBackgroundcolor(){
+             document.body.style.backgroundColor=randomColor();
+        }
+       
+    }
+    const stopChangingColor = function(){
+        clearInterval(intervalId)
+        intervalId = null;
+    }
     document.getElementById("start").addEventListener("click",startChangingColor)
-    document.getElementById("stop").addEventListener("click",function(){
-        
-    })
+    document.getElementById("stop").addEventListener("click",stopChangingColor)
 </script>
 </html>
